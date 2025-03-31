@@ -1,0 +1,71 @@
+.wrapper {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &Products {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 40px;
+  }
+
+  &Title {
+    font-size: 44px;
+    text-align: center;
+    margin: 30px 0;
+  }
+}
+
+.wrapperTitle {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.wrapperControls {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+
+  select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    font-size: 14px;
+
+    &:hover {
+      border-color: #999;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+}
+
+.wrapperProducts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    &Products {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    &Products {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 80px;
+    }
+  }
+}

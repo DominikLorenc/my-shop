@@ -1,0 +1,34 @@
+.wrapper {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+
+  &Image {
+    height: 300px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &ProductDetails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    flex-grow: 1;
+
+    margin-top: 20px;
+  }
+
+  &AddToCart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+}
