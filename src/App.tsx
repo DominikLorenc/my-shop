@@ -6,6 +6,7 @@ import { Header } from "./components/Header/Header";
 import { Home } from "./pages/Home/Home";
 import { Cart } from "./components/Cart/Cart";
 import { ProductDetails } from "./pages/ProductDetails/ProductDetails";
+import { NotFound } from "./components/NotFound/NotFound";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

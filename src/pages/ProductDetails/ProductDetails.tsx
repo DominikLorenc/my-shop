@@ -30,8 +30,7 @@ export const ProductDetails = () => {
   } = useProductDetails();
 
   if (loading) return <Loading />;
-  if (error) return <Error message={error} />;
-  if (!product) return <p>Product not found</p>;
+  if (!product || error) return <Error message={"Product not found"} />;
 
   const { title, image, price, availableQuantity } = product;
   const buttonDisabled =
