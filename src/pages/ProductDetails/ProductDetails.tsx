@@ -32,7 +32,7 @@ export const ProductDetails = () => {
   if (loading) return <Loading />;
   if (!product || error) return <Error message={"Product not found"} />;
 
-  const { title, image, price, availableQuantity } = product;
+  const { title, image, price, availableQuantity, description } = product;
   const buttonDisabled =
     availableQuantity <= 0 || Number(amount) > availableQuantity;
 
@@ -43,6 +43,7 @@ export const ProductDetails = () => {
       </div>
       <div className={wrapperProductDetails}>
         <h2>{title}</h2>
+        <p>{description}</p>
         <p>{price.toFixed(2)}</p>
         <div>
           <button onClick={handleDecrement} disabled={Number(amount) <= 1}>
